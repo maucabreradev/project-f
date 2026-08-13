@@ -1,0 +1,3 @@
+# Soft-deleted content is retained in the archive forum for a configurable window
+
+Threads and posts are never hard-deleted on moderation: they move to the Archive forum for a web master–configured window of 0–30 days (0 means they never appear), after which they stop being shown; archived threads remain in the Archive forum indefinitely. We chose this over immediate hard deletion because community history is part of a roleplay forum's value, while the bounded window keeps removal requests and moderation privacy concerns handled without losing the thread of a story. The window is a per-forum configuration decision, not a fixed product policy.

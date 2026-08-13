@@ -1,0 +1,3 @@
+# Character sheet evaluation is an optional, web master-owned AI integration
+
+Character sheet creation can be followed by an AI review that checks whether the character's story fits the forum's lore and the web master's evaluation criteria. The feature is off by default: each web master opts in and supplies their own AI API key (for example ChatGPT or Gemini). We chose a bring-your-own-key, opt-in model over a built-in evaluator because AI quality, cost, and provider preferences differ per community, and because sending user-written stories to a third-party API is a decision each owner must make consciously. When the feature is off, no member content leaves the forum.

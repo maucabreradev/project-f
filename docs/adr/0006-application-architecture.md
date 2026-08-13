@@ -1,0 +1,7 @@
+# Single-tenant application architecture
+
+Project F ships as one Cloudflare Worker per deployment (ADR-0003): a Hono app owns the `/api/*` and `/realtime` routes and wraps the Astro SSR handler for everything else, and every frontend call — browser or server-rendered — crosses the same HTTP seam through the type-safe Hono RPC client (`hc`). The backend is one deep module at that seam, internally composed of one module per domain aggregate (identity, characters, boards, content, economy, moderation, sheets, notifications, configuration); modules communicate by direct typed calls wired in the composition root, never through an event bus. Persistence lives inside the API package (Drizzle over Turso/libSQL); authorization is policy-as-data (ranks, per-board permissions, moderation scope, visitor visibility) evaluated by a small permission module, so the rules never leak into routes.
+
+We chose this over two separate Workers (two deployments per web master, CORS, duplicated session wiring) and over an event bus (a shallow pass-through with one subscriber per event in a single process). The consequence is a genuinely single testing seam: everything is exercised through `app.request()` against a local libSQL database, and Astro SSR pages fetch through the same seam in-process so the interface never gets bypassed.
+
+Economy atomicity (debit + stock + ledger) over the libSQL HTTP protocol is validated as a spike in the skeleton ticket; if the HTTP protocol cannot batch transactions, the economy write path serializes through a single-writer Durable Object.

@@ -1,0 +1,3 @@
+# Content is scoped to characters, not accounts
+
+Project F is a roleplay forum, so roleplay identity lives in the character. Threads, posts, currency, inventory, and the public profile belong to the character, not to the member's account; a member can hold up to two characters, each with its own fully separate economy and content. We chose this over the classic forum model of account-scoped content because it makes the virtual economy meaningful — each character earns, owns, and spends independently. Deleting a character deletes its inventory, currency, and public profile, but its posts stay visible with an unlinked public name.
