@@ -131,12 +131,12 @@ Project F is a deployable web application for building customizable online rolep
 - **Identity model**: one entity for the account holder (Member/Account); username is the unique character identifier (one-time rename); character names are not unique.
 - **Sheet model**: web master–defined data fields presented through enabled templates (templates differ only in presentation); birth-date field appears on the character only when the birthday earn rule is enabled.
 - **Notifications**: real-time delivery to the navbar with per-member preferences; types: replies, mentions, resolved appeals, birthday/interest currency.
-- **Tech stack**: not yet decided. The spec records product requirements; stack selection is a separate decision and must be approved before implementation (AGENTS.md rules 12–15).
+- **Tech stack**: decided and approved — see `docs/adr/0005-tech-stack.md` (stack) and `docs/adr/0006-application-architecture.md` + `docs/architecture.md` (application architecture). The spec records product requirements only.
 
 ## Testing Decisions
 
 - No codebase exists yet, so no testing seams or prior art exist. At implementation time, tests must exercise external behavior only (registration flows, economy transactions, thread state transitions, moderation permissions, ban/appeal lifecycle), not implementation details.
-- The single testing seam for the whole application will be proposed when the stack is selected; prefer one seam over many.
+- The single testing seam for the whole application is fixed by ADR-0005/0006: the Hono HTTP boundary, exercised with Vitest and `app.request()` against a local libSQL database; a minimal Playwright suite covers UI flows only.
 
 ## Out of Scope
 
@@ -149,6 +149,6 @@ Project F is a deployable web application for building customizable online rolep
 
 ## Further Notes
 
-- Canonical language: `CONTEXT.md`. Consolidated model: `docs/domain-model.md`. Decisions: `docs/adr/0001-0004`.
+- Canonical language: `CONTEXT.md`. Consolidated model: `docs/domain-model.md`. Decisions: `docs/adr/0001-0006`. Architecture: `docs/architecture.md`.
 - Modeling resolutions to keep: Member and Account are one entity; Forum and Subforum are one entity at different nesting depths (invariant: depth ≤ 1).
 - Recording ambiguity for the future: none blocking; the five previously open points are resolved in `docs/domain-model.md` section 10.

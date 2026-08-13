@@ -9,3 +9,4 @@
 - [ ] The monorepo boots locally and `wrangler deploy` pushes a live skeleton to a Cloudflare account; the app serves any configured host (ADR-0003)
 - [ ] Drizzle schema and first migration applied to a local Turso database
 - [ ] The single testing seam runs (Vitest + `app.request()` against local libSQL) and CI gates typecheck, lint, tests, and build (AGENTS.md rule 28)
+- [ ] The economy-atomicity spike is validated: multi-statement transactions (balance debit + stock decrement + ledger entry) work over the libSQL HTTP protocol; if not, the single-writer Durable Object fallback is adopted (ADR-0006)
