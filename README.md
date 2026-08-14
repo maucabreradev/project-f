@@ -14,6 +14,7 @@ This repository contains **documentation only** — no application code yet. The
 | --- | --- |
 | `AGENTS.md` | Permanent rules and repository state; read this first |
 | `.scratch/initial-product-definition/spec.md` | Product requirements: user stories and implementation decisions |
+| `.scratch/project-f-spec/spec.md` | Consolidated product specification (all approved decisions) with vertical-slice tickets 01–34 in `.scratch/project-f-spec/issues/` |
 | `CONTEXT.md` | Canonical glossary (ubiquitous language) |
 | `docs/domain-model.md` | Authoritative domain model: entities, relationships, states, roles, rules, invariants |
 | `docs/adr/` | Architectural decisions (0001–0006) |
@@ -27,4 +28,4 @@ This repository contains **documentation only** — no application code yet. The
 
 ## Where the work is tracked
 
-Product specs and implementation tickets live as markdown in `.scratch/<feature-slug>/`: the accepted spec and tickets 01–59 in `.scratch/initial-product-definition/`, and a proposed (not accepted) feature in `.scratch/member-directory/`. See `docs/agents/issue-tracker.md`.
+Product specs and implementation tickets live as markdown in `.scratch/<feature-slug>/`: the accepted spec and tickets 01–59 in `.scratch/initial-product-definition/`, the consolidated spec and its vertical-slice tickets 01–34 in `.scratch/project-f-spec/`, and a proposed (not accepted) feature in `.scratch/member-directory/`. See `docs/agents/issue-tracker.md`.
