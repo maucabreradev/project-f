@@ -105,4 +105,4 @@ No event bus (ADR-0006): one process, one subscriber per event — a bus would b
 
 ## Testing
 
-The HTTP seam is the single testing seam (spec lines 137–139, ADR-0005): Vitest + `app.request()` against a local libSQL database covering registration flows, economy transactions, thread state transitions, moderation permissions, and the ban/appeal lifecycle. Island unit tests and a minimal Playwright suite cover UI flows. A feature is not finished until tests, typecheck, lint, and build pass (AGENTS.md rule 28).
+The HTTP seam is the single testing seam (spec lines 138–139, ADR-0005): Vitest + `app.request()` against a local libSQL database covering registration flows, economy transactions, thread state transitions, moderation permissions, and the ban/appeal lifecycle. Island unit tests and a minimal Playwright suite cover UI flows. A feature is not finished until tests, typecheck, lint, and build pass (AGENTS.md rule 28).

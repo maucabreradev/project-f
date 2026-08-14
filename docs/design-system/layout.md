@@ -27,7 +27,7 @@ Every route shares the same template (true for the visitor-facing pages as much 
 ## 2. Floating navbar
 
 - **Position**: `sticky`, `top-0`, full viewport width, `z-index: 40`.
-- **Surface**: translucent glass — backdrop `--background` at ~85% opacity + `backdrop-blur`, 1px hairline bottom border, `--shadow-nav` to separate from scrolling content. On the home page it may start transparent over the hero and gain the glass surface after the first scroll threshold (Modern: no layout shift — reserve h-16 space or animate background only, never height/content).
+- **Surface**: translucent glass — backdrop `--background` at ~85% opacity + `backdrop-blur`, 1px hairline bottom border, `--shadow-nav` to separate from scrolling content. On the home page it may start transparent over the hero and gain the glass surface after the first scroll threshold (to avoid layout shift: reserve h-16 space or animate background only, never height/content).
 - **Height**: `h-16` (64px), content `h-10` row. On very small screens the search field collapses into the mobile drawer to fit.
 - **Content (visitor)**: identity (logo + forum name), search, login, register.
 - **Content (member)**: identity, search, real-time notification bell (island), character switcher (island, two characters), currency balance pill, avatar `DropdownMenu` (account, economy, shop, inventory, admin when rank allows, logout).

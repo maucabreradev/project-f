@@ -325,7 +325,7 @@ Contract: these exist and are used **as shipped** in `apps/web` — no wrapper, 
 - **Reusable**: `scoped` (ThreadPage).
 
 ### NewThreadForm `[Island]`
-- **Responsibility**: thread creation — title, IC/OOC tag, WYSIWYG body, sheet gate on IC boards (flow 08, tile 19).
+- **Responsibility**: thread creation — title, IC/OOC tag, WYSIWYG body, sheet gate on IC boards (flow 08, ticket 19).
 - **Props**: `boardId: string`, `board: { requiresSheet: boolean; sheetAvailable?: boolean; limits; canTag: boolean }`, `onSuccess(threadId)`, `onCancel()`.
 - **Events**: `onSuccess`, `onCancel`, `onSubmit` (Zod-validated).
 - **Variants**: none.
@@ -527,6 +527,11 @@ Templates are layout skeletons with **slots**; pages fill slots and supply data.
 - **Slots**: `icon`, `title`, `body`, `action`.
 - **Reuse**: `reusable` (error pages) with `BanInterstitial` composing the ban variant.
 
+### SkeletonPage
+- **Responsibility**: layout-preserving page skeleton for data-bound surfaces (boards, threads, admin tabs) — header plus rows matching the target geometry; never a full-page freeze.
+- **Slots**: `header`, `rows`.
+- **Reuse**: `reusable` (initial SSR-to-hydration gap and solid-query fetch states; detail in `components.md` §13).
+
 ## 7. Pages
 
 Pages are the route-bound instances (`docs/routes.md`). Each definition: route → template → organisms → nature. Data access via `hc` (pages fetch server-side; islands mutate through the API — `../architecture.md`).
@@ -574,7 +579,7 @@ Pages are the route-bound instances (`docs/routes.md`). Each definition: route �
 
 1. **Reuse before create** — check §3–5 first; if a composition is wanted but a similar Project F component exists, extend variants; only new behavior justifies a new entry (AGENTS.md rule 22).
 2. **No generic catch-alls** — `DataTable` is the one deliberate generic (many similar admin tables); everything else has one responsibility.
-3. **SSR by default** — a component is `[SSR]` unless its interactivity earns hydration; components.md §"islands" scopes when hydration is appropriate (`../architecture.md`).
+3. **SSR by default** — a component is `[SSR]` unless its interactivity earns hydration; `component-architecture.md` §1.1 and `components.md` §2 scope when hydration is appropriate (`../architecture.md`).
 4. **Props carry data, not style** — all visual variation goes through `variants` + design tokens; no ad-hoc inline styling (components.md §16).
 5. **A11y ships with the component** — each entry inherits the baselines in `accessibility.md` (focus, labels, SR, contrast) and must document any deviation.
 6. **Routes are the source of pages** — pages in §7 mirror `docs/routes.md`; never add a page outside the route map (AGENTS.md rule 23).

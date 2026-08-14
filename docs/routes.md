@@ -12,7 +12,7 @@ The design-level route map, derived from the approved UX flows (`docs/ux/`). It 
 
 | Route | Purpose | Authorized actors | Required data | Actions | States |
 | --- | --- | --- | --- | --- | --- |
-| `/` | Home: forum identity, board structure, recent activity, stats | All (visitor and member) | Identity configuration (name, cover, colors), visible boards, recent threads/posts, stats, active session | Navigate to boards/threads/shop/members/admin; login/register; search; session state | Visitor vs. member rendering; `unconfirmed`/`inactive` banners; global ban interstitial (replaces the page) |
+| `/` | Home: forum identity, board structure, recent activity, stats | All (visitor and member) | Identity configuration (name, cover, colors), visible boards, recent threads/posts, stats, active session | Navigate to boards/threads/shop/admin; login/register; search; session state (`/members` is proposed — row below) | Visitor vs. member rendering; `unconfirmed`/`inactive` banners; global ban interstitial (replaces the page) |
 
 ## Identity
 

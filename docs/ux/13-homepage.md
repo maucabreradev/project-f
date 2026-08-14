@@ -38,4 +38,4 @@ A single entry point to everything: browsing, joining, and — for members — t
 
 ## Navigation
 
-`/` → any route: login, register, boards, thread, shop, members, account, admin (rank-permitted).
+`/` → any route: login, register, boards, thread, shop, account, admin (rank-permitted). The member directory (`/members`) is proposed — not part of the accepted spec.

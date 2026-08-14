@@ -17,7 +17,7 @@ Tabbed configuration, each tab validated with Zod and saved to the single `Forum
 3. **Economy**: currency name; earn rules — per thread, per post, login streak, monthly interest (day and percentage), birthday reward (enabling the birthday rule adds the character birth-date field). Applies to flow 11.
 4. **Shop**: refund window (24 h), sell-back fraction. Applies to flow 12.
 5. **Sheets**: data field definitions, enabled sheet templates (presentation variants over the same fields — invariant 14), AI evaluation toggle with the web master's own API key (ADR-0002).
-6. **Archive**: soft-delete window (0–30 days; 0 = immediate), archive forum visibility defaults. Applies to flows 22–23.
+6. **Archive**: soft-delete window (0–30 days; 0 = immediate), archive forum visibility defaults. Applies to tickets 22–23.
 7. **Permissions**: default per-rank read/write matrices for new boards (fine-grained per-board overrides stay in the Boards tab, flow 07).
 
 ## States

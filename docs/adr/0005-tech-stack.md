@@ -10,7 +10,7 @@ Project F is a single-tenant, deployable web application: each web master clones
 
 **Infrastructure** — pnpm monorepo (`apps/web`, `apps/api`, `packages/validation`); local development with Wrangler and a local Turso database; no Docker (the deployment target is the Workers edge runtime, so containers add nothing in production; local parity comes from Miniflare and Turso local); production deployment via `wrangler deploy`: Workers (Astro SSR + Hono API), Durable Objects, R2 for avatars, banners, and post images, Cron Triggers for interest, birthday, and login-streak economy rules; Resend for transactional email (confirmation links, password reset); the forum's own domain via Cloudflare DNS/TLS per ADR-0003.
 
-**Testing** — one seam for the whole application (spec lines 137–139): the Hono HTTP boundary, exercised with Vitest and `app.request()` against an embedded/local libSQL database, covering economy transactions, thread state transitions, moderation permissions, and the ban/appeal lifecycle; a minimal Playwright suite covers UI flows only.
+**Testing** — one seam for the whole application (spec lines 138–139): the Hono HTTP boundary, exercised with Vitest and `app.request()` against an embedded/local libSQL database, covering economy transactions, thread state transitions, moderation permissions, and the ban/appeal lifecycle; a minimal Playwright suite covers UI flows only.
 
 ## Considered options
 

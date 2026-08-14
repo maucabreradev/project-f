@@ -89,7 +89,7 @@ Badges are decorative markers — when they carry the *only* meaning (e.g., an e
 shadcn `Card`. Flat by default: `--card` surface, 1px `--border`, `--radius-lg` (12).
 
 - **Default card**: board/forum boxes, admin panels, shop item tiles.
-- **Interactive card**: hover raises (`--surface-raised` or `--shadow-raise`, border +1 step); used for clickable boards/threads/items. Keyboard focus shows ring.
+- **Interactive card**: hover raises (`--shadow-raise`, border +1 step); used for clickable boards/threads/items. Keyboard focus shows ring.
 - **Post card**: the per-post container in `/thread/<id>` (`PostProfile` header + content + moderation history footer). Reply accents the left edge with `--primary` so "latest reply" is scannable.
 - **Profile panel**: member profile header — banner (cover), avatar overlapping, name, username, rank, meta (`../routes.md` `/member/<username>`).
 - Card headers keep title + optional action slot; dividers use `Separator`/hairline borders, never background contrast alone.
@@ -99,7 +99,7 @@ shadcn `Card`. Flat by default: `--card` surface, 1px `--border`, `--radius-lg` 
 - **Dialog** — shadcn `Dialog` (Kobalte Dialog): overlay `--background` at 60% opacity with `backdrop-blur-sm`, content `--popover`/`--card`, `--radius-xl`, `--shadow-dialog`, default `space-6` padding. Used for: item purchase confirm (flow 12 `item detail`), item detail, quick actions, admin deep actions (flow 07), avatar/banner from URL (flow 16).
 - **AlertDialog** — overlay of Dialog for destructive, non-closeable-on-outside-click confirmations: ban, delete account, delete character, and any permanent action. Mandatory because these actions are irreversible.
 - **Sheet** — Kobalte Sheet used as (a) mobile navigation drawer (`layout.md` §2) and (b) optional character-sheet preview panel on post profiles.
-- All overlays: focus trap, `Esc` to close, `aria-labelledby` heading, restore focus (`accessibility.md` §4). Loading and error states inside a dialog render inline (Skeleton / Alert), not as secondary modals.
+- All overlays: focus trap, `Esc` to close, `aria-labelledby` heading, restore focus (`accessibility.md` §3). Loading and error states inside a dialog render inline (Skeleton / Alert), not as secondary modals.
 
 ## 10. Tables
 
@@ -148,7 +148,7 @@ Used for: board with no threads, no search results (global and per-thread), empt
   - `404` — friendly, keeps navbar/chrome, search suggestion.
   - `403` — hard gate (admin/configuration routes are never silently hidden — flow 07/17). Explains the missing permission without exposing internals.
   - `500` — generic with retry.
-- **BanInterstitial** (organism) — full-page shutter over every route when email/IP is banned (flow 13 errors): reason (mandatory), duration, appeal action. Takes visual precedence over all content (`z-index: 90`).
+- **BanInterstitial** (organism) — full-page shutter that takes precedence over every route when email/IP is banned (`/banned` representation, `docs/routes.md`): reason (mandatory), duration, appeal action. Takes visual precedence over all content (`z-index: 90`).
 - **Failure states are never silent**: network/server failures surface as a non-blocking toast and the form keeps its values (UX README).
 
 ## 16. Cross-cutting

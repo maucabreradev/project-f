@@ -13,7 +13,7 @@ Status: accepted
 - **Character-scoped content and economy (ADR-0001):** threads, posts, currency, inventory, and the public profile belong to the character, not the account.
 - **Module ownership (ADR-0006):** each table belongs to exactly one deep module; other modules reach its data only through that module's interface.
 - **Economy atomicity:** the multi-statement write path (debit + stock + ledger) is validated by the ticket 01 spike; the single-writer Durable Object is the fallback (ADR-0006). The schema is independent of the outcome.
-- **Proposed, not accepted:** the public character directory (`.scratch/member-directory/`) is excluded here. Character FTS5 exists only for the approved global search (ticket 56).
+- **Proposed, not accepted:** the public character directory (`.scratch/member-directory/`) is excluded here. Character FTS5 serves the approved global search and `@username` mention suggestions (tickets 56/27).
 
 ## 2. Conventions
 
