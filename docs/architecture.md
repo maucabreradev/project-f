@@ -12,7 +12,7 @@ project-f/
 │   ├── web/                    # Astro SSR + SolidJS islands — the deployment unit
 │   │   ├── src/pages/          # file routes mirroring the forum structure
 │   │   ├── src/islands/        # SolidJS islands: editor, navbar, character switcher, shop
-│   │   ├── src/components/     # Atomic Design: atoms / molecules / organisms / templates
+│   │   ├── src/components/     # Atomic Design: atoms / molecules / organisms / templates (catalog: docs/design-system/component-architecture.md)
 │   │   ├── src/layouts/
 │   │   ├── src/styles/         # design tokens (docs/design-system/)
 │   │   ├── src/entrypoint.ts   # the single Worker entry
@@ -41,7 +41,7 @@ One Worker per deployment (ADR-0003, ADR-0006). The entrypoint wraps the Astro S
 - **Pages** render server-side (Astro SSR) so visitors read without JavaScript; routes are Astro file routes (AGENTS.md rule 23) mirroring the route map in `docs/routes.md`.
 - **Islands** (SolidJS) only where interactivity earns its cost: WYSIWYG editor, real-time navbar, character switcher, shop interactions, complex forms.
 - **Server state**: `@tanstack/solid-query` in islands for caching and mutations.
-- **Styling**: Tailwind CSS v4 tokens with Kobalte primitives and shadcn-solid components; Atomic Design organization (AGENTS.md rule 20). The approved Design System lives in `docs/design-system/` (tokens, components, layout, accessibility) — frontend work references it as the single source of truth.
+- **Styling**: Tailwind CSS v4 tokens with Kobalte primitives and shadcn-solid components; Atomic Design organization (AGENTS.md rule 20). The approved Design System lives in `docs/design-system/` (tokens, components, component-architecture, layout, accessibility) — frontend work references it as the single source of truth.
 - **Forms**: SolidJS-native forms validated with Zod from `packages/validation`; complex forms live in islands.
 - **Data access**: pages and islands call the API through the `hc` client over the HTTP seam.
 

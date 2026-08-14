@@ -54,7 +54,7 @@ Identity overrides (forum name/logo, accent tint) come from the Identity token l
 This is the requested full-width banner — it uses **100% of the forum's width**, edge to edge, on every breakpoint.
 
 - **Height**: `clamp(20rem, 40vh, 26rem)` — responsive, never fixed-pixel so it fills nicely from phone to desktop.
-- **Content**: web master–configured cover image (flow 17 Identity) with an overlay gradient tied to the Identity color (`--cover` → transparent) for guaranteed text contrast; atop it: a thin status row (chips: stats), the forum name (`display` step, `../tokens.md` §5), and optional tagline; CTA row (register / browse - varies by session state).
+- **Content**: web master–configured cover image (flow 17 Identity) with an overlay gradient tied to the Identity color (`--cover` → transparent) for guaranteed text contrast; atop it: a thin status row (chips: stats), the forum name (`display` step, `tokens.md` §5), and optional tagline; CTA row (register / browse - varies by session state).
 - **Layer**: the hero sits directly under the floating navbar (navbar is sticky above it); the navbar's transparent-over-hero variant applies here.
 - Placeholder: if no cover is configured, render a flat `--primary`→`--accent` gradient panel with the same overlay rules — the banner exists regardless.
 - The banner is a `template`-level surface of the home route only (`/`, route map), not a reusable component elsewhere.
@@ -76,7 +76,7 @@ Mobile-first, Tailwind breakpoints: `sm 640 / md 768 / lg 1024 / xl 1280 / 2xl 1
 Rules:
 
 - **No horizontal page scroll** at any width; wide tables collapse (`components.md` §10), long prose wraps, code blocks scroll internally.
-- **Touch targets** ≥ 44×44 CSS px on all interactive controls at `sm` and below (`../accessibility.md` §8).
+- **Touch targets** ≥ 44×44 CSS px on all interactive controls at `sm` and below (`accessibility.md` §8).
 - **Forms** stack full-width fields on mobile; two-column grids only ≥ `md` when semantically paired.
 - Grid gap scale follows `tokens.md` §6; never add a third breakpoint-specific column without a layout reason.
 - The readable column is preserved: text inside cards never exceeds ~72ch.
@@ -101,7 +101,7 @@ Astro's `<ViewTransitions />` is enabled globally (MPA-friendly, works with Soli
 **Performance & reduced motion**
 
 - All transitions are GPU-friendly (opacity/transform only) — no width/height animation.
-- `prefers-reduced-motion` disables cross-page transitions and turn the page changes instant (`../accessibility.md` §7).
+- `prefers-reduced-motion` disables cross-page transitions and turn the page changes instant (`accessibility.md` §7).
 - Islands that animate status (notification dot) use `opacity`/`transform`, never layout.
 
 ## 7. Section rhythm

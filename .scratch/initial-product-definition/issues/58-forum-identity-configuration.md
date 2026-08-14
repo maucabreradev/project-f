@@ -2,7 +2,7 @@
 
 **What to build:** The web master configures the forum's identity (name, domain, cover images, colors) and it applies across the public UI.
 
-**Blocked by:** 02 — Design System tokens, 07 — Admin dashboard shell
+**Blocked by:** 07 — Admin dashboard shell (02 — Design System tokens is `done`, delivered in `docs/design-system/`)
 
 **Status:** ready-for-agent
 

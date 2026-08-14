@@ -34,7 +34,7 @@
 
 ### Frontend
 
-19. Follow the approved Design System in `docs/design-system/`.
+19. Follow the approved Design System in `docs/design-system/` (canonical component catalog: `docs/design-system/component-architecture.md`).
 20. Use Atomic Design as the component organization convention.
 21. Do not artificially turn every HTML element into a component.
 22. Components must have clear responsibilities.

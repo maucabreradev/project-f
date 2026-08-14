@@ -19,7 +19,7 @@ Tokens are split into two layers so the forum can be re-skinned without breaking
 
 ## 2. Color — light
 
-Color is authored in OKLCH (Tailwind v4 default). Values are reference defaults; the hard rule is contrast (see `../accessibility.md` §2).
+Color is authored in OKLCH (Tailwind v4 default). Values are reference defaults; the hard rule is contrast (see `accessibility.md` §2).
 
 | Token | Value | Purpose |
 | --- | --- | --- |
@@ -123,7 +123,7 @@ Used by badges, alerts, and status chips. Each state exposes a soft background +
 
 - Headings: `letter-spacing: -0.015em`; display: `-0.03em`.
 - Inline code, quotes, spoilers: mono fallback `ui-monospace, SFMono-Regular, Menlo, monospace` at `0.95em`.
-- All content uses logical line-length: prose blocks are capped by the layout system (`../layout.md` §3), not by the type scale.
+- All content uses logical line-length: prose blocks are capped by the layout system (`layout.md` §3), not by the type scale.
 - Ensure everything self-hosted has `font-display: swap` with the UI font preloaded to avoid layout shift.
 
 ## 6. Spacing
@@ -204,7 +204,7 @@ Focus is expressed with `--ring` (ring, offset outline), never a shadow — the 
 
 ## 11. Motion tokens
 
-See `../layout.md` §6 for how these apply (View Transitions, micro-interactions).
+See `layout.md` §6 for how these apply (View Transitions, micro-interactions).
 
 | Token | Value |
 | --- | --- |
@@ -214,4 +214,4 @@ See `../layout.md` §6 for how these apply (View Transitions, micro-interactions
 | `--ease-standard` | `cubic-bezier(0.2, 0, 0, 1)` |
 | `--ease-emphasis` | `cubic-bezier(0.16, 1, 0.3, 1)` |
 
-All motion is disabled under `prefers-reduced-motion`; see `../accessibility.md` §7.
+All motion is disabled under `prefers-reduced-motion`; see `accessibility.md` §7.

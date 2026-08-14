@@ -17,7 +17,8 @@ The approved Design System for Project F: a **clean, flat, modern, minimalist** 
 | Doc | Covers |
 | --- | --- |
 | `tokens.md` | Color (light + dark), typography (Inter), type + spacing scales, radius, shadows, z-index, motion tokens, Identity override layer |
-| `components.md` | Buttons, inputs, selects, badges, cards, dialogs, tables, navigation, feedback, loading, empty/error states — variants, states, Atomic map, library mapping |
+| `components.md` | Buttons, inputs, selects, badges, cards, dialogs, tables, navigation, feedback, loading, empty/error states — variants, states, library mapping |
+| `component-architecture.md` | The canonical Atomic Design catalog: atoms, molecules, organisms, templates, pages — responsibility, props, events, variants, reusability |
 | `layout.md` | Page shell, floating navbar, full-width home banner, containers, board structure, responsive behaviour, View Transitions & motion |
 | `accessibility.md` | WCAG 2.1 AA baseline: contrast, focus/keyboard, forms, SR, motion, touch, verification |
 
@@ -30,8 +31,8 @@ The approved Design System for Project F: a **clean, flat, modern, minimalist** 
 ## How it maps onto the approved stack
 
 - **Tailwind CSS v4**: tokens are CSS variables in `@theme` (semantic names from shadcn-solid) plus the Identity override layer. Scheme toggled by a `.dark` class on the root, default honoring `prefers-color-scheme`.
-- **Kobalte + shadcn-solid**: components map 1:1 (`components.md` §2); nothing headless is re-implemented.
-- **Atomic Design** (AGENTS.md rule 20): atoms → molecules → organisms → templates; components live in `apps/web/src/components/` (`../architecture.md`).
+- **Kobalte + shadcn-solid**: primitives are consumed directly, never wrapped (`component-architecture.md` §2); nothing headless is re-implemented.
+- **Atomic Design** (AGENTS.md rule 20): atoms → molecules → organisms → templates → pages; the canonical catalog is `component-architecture.md`; components live in `apps/web/src/components/` (`../architecture.md`).
 - **Islands**: only interactive organisms hydrate (navbar bell, character switcher, editor, shop, complex forms); everything else is SSR.
 
 ## Implementation contract
