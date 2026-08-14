@@ -1,0 +1,37 @@
+{
+  "name": "@project-f/web",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "astro build && tsc --noEmit",
+    "typecheck": "astro check && tsc --noEmit",
+    "lint": "eslint src --ext ts,tsx,astro",
+    "test": "vitest run",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev --local"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.2.1",
+    "@astrojs/solid-js": "^4.0.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@libsql/client": "^0.5.0",
+    "@project-f/api": "workspace:*",
+    "@project-f/validation": "workspace:*",
+    "@tanstack/solid-query": "^5.0.0",
+    "astro": "^4.5.0",
+    "drizzle-orm": "^0.30.0",
+    "hono": "^4.13.2",
+    "solid-js": "^1.8.0",
+    "tailwindcss": "^3.4.0",
+    "ulid": "^2.3.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@cloudflare/workers-types": "^4.2024000.0",
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.2.0",
+    "wrangler": "^3.30.0"
+  }
+}
