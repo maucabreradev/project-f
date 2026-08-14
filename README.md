@@ -19,6 +19,7 @@ This repository contains **documentation only** — no application code yet. The
 | `docs/adr/` | Architectural decisions (0001–0006) |
 | `docs/architecture.md` | Approved application architecture: modules, communication, persistence, auth |
 | `docs/persistence-model.md` | Accepted persistence model: tables, columns, decisions (D1–D13), target of the initial Drizzle migration |
+| `docs/api.md` | Accepted REST API design: methods, URLs, requests, responses, validation, auth, authorization, errors |
 | `docs/design-system/` | Approved Design System: tokens, components, layout, accessibility |
 | `docs/ux/` | Accepted UX flows (01–18) |
 | `docs/routes.md` | Accepted route map |
