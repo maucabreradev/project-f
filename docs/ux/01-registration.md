@@ -1,6 +1,6 @@
 # Flow 01 — Registration
 
-Status: proposed
+Status: accepted
 
 ## Entry
 

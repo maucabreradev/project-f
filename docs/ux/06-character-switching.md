@@ -1,6 +1,6 @@
 # Flow 06 — Character Switching
 
-Status: proposed
+Status: accepted
 
 ## Entry
 

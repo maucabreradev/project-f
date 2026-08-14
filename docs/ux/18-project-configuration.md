@@ -1,6 +1,6 @@
 # Flow 18 — Project Configuration (Deployment)
 
-Status: proposed
+Status: accepted
 
 Scope: the deployment lifecycle **outside the web UI** — how a web master turns a cloned repository into a running forum tenant (ADR-0003, ADR-0005).
 

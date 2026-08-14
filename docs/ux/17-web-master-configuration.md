@@ -1,6 +1,6 @@
 # Flow 17 — Web Master Configuration
 
-Status: proposed
+Status: accepted
 
 ## Entry
 

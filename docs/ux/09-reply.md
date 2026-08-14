@@ -1,6 +1,6 @@
 # Flow 09 — Reply to a Thread or Post
 
-Status: proposed
+Status: accepted
 
 ## Entry
 
@@ -23,9 +23,9 @@ Status: proposed
 | Thread state | Reply behavior |
 | --- | --- |
 | `open` | allowed |
-| `closed` | blocked for everyone; staff may reopen (flow 20) |
-| `archived` | read-only; only an Administrator unarchives (flow 22) |
-| `soft-deleted` | hidden during the configured archive window (flow 23) |
+| `closed` | blocked for everyone; staff may reopen (ticket 20) |
+| `archived` | read-only; only an Administrator unarchives (ticket 22) |
+| `soft-deleted` | hidden during the configured archive window (ticket 23) |
 
 ## Errors
 

@@ -1,6 +1,6 @@
 # Flow 16 — Avatar and Banner
 
-Status: proposed
+Status: accepted
 
 ## Entry
 

@@ -1,6 +1,6 @@
 # Flow 02 — Login
 
-Status: proposed
+Status: accepted
 
 ## Entry
 

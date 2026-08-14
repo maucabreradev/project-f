@@ -1,6 +1,6 @@
 # Flow 15 — Staff Permissions
 
-Status: proposed
+Status: accepted
 
 ## Entry
 
@@ -17,7 +17,7 @@ Status: proposed
    - confirm → the rank and scope apply immediately and the promotion is logged.
 3. **Promote to Administrator**: no scope choice — all moderator actions plus board creation, currency/inventory modification, logs, bans, and appeal resolution (never forum configuration, never staff promotion).
 4. **Demote**: reverts to the previous rank; the Web master can never be demoted.
-5. **Banning staff** (flow `48-staff-ban-arbitration`): when the ban target is another staff member, a **third Administrator** must approve or reject the ban (arbitration) — the UI routes the ban into a pending state until decided.
+5. **Banning staff** (ticket `48-staff-ban-arbitration`): when the ban target is another staff member, a **third Administrator** must approve or reject the ban (arbitration) — the UI routes the ban into a pending state until decided.
 6. Board-level permissions per rank are configured separately in the Boards tab (flow 07/17), not at promotion.
 
 ## States

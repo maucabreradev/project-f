@@ -1,6 +1,6 @@
 # Flow 04 — Profile Configuration
 
-Status: proposed
+Status: accepted
 
 Scope: one page with two tabs — **Account** (identity facet) and **Character** (persona facet).
 
@@ -25,7 +25,7 @@ Scope: one page with two tabs — **Account** (identity facet) and **Character**
 
 1. **Character name**: editable (non-unique display name).
 2. **Username**: one-time custom rename opportunity, shown only while the random username is still in place; validated for uniqueness.
-3. **Character sheet**: link to create/edit the sheet (flow `51-character-sheet-page`).
+3. **Character sheet**: link to create/edit the sheet (ticket `51-character-sheet-page`).
 4. **Avatar and banner**: management UI (flow 16).
 
 ## States

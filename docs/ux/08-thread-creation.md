@@ -1,6 +1,6 @@
 # Flow 08 — Thread Creation
 
-Status: proposed
+Status: accepted
 
 ## Entry
 
@@ -23,7 +23,7 @@ Status: proposed
 
 ## States
 
-- Thread: `open` (created); `closed`, `archived`, `soft-deleted` are later states (flows 20–23)
+- Thread: `open` (created); `closed`, `archived`, `soft-deleted` are later states (tickets 20–23)
 - Tag: `IC | OOC`, editable by creator or staff
 - Earned currency is never clawed back when the thread is later deleted
 

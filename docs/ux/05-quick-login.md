@@ -1,6 +1,6 @@
 # Flow 05 — Quick Login
 
-Status: proposed
+Status: accepted
 
 ## Entry
 

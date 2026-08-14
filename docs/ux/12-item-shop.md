@@ -1,6 +1,6 @@
 # Flow 12 — Item Shop
 
-Status: proposed
+Status: accepted
 
 ## Entry
 

@@ -1,6 +1,6 @@
 # Flow 11 — Virtual Economy
 
-Status: proposed
+Status: accepted
 
 ## Entry
 

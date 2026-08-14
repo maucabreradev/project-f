@@ -61,7 +61,7 @@
 
 ## Repository state
 
-There is no application code, package manifest, build/test system, or CI yet — the tracked content is `LICENSE`, the documentation (`CONTEXT.md`, `docs/domain-model.md`, `docs/adr/0001-0006`, `docs/architecture.md`), the product spec and implementation tickets (`.scratch/initial-product-definition/`), and the agent skills (`.agents/`, pinned by `skills-lock.json`). The domain documentation is complete and authoritative: read `CONTEXT.md` (glossary), `docs/domain-model.md` (entities, rules, invariants), and `docs/adr/` (decisions) before any design or implementation work. Don't hunt for entrypoints or conventions in code; there is none yet.
+There is no application code, package manifest, build/test system, or CI yet — the tracked content is `LICENSE`, the documentation (`CONTEXT.md`, `docs/domain-model.md`, `docs/adr/0001-0006`, `docs/architecture.md`, the accepted UX flows `docs/ux/`, the accepted route map `docs/routes.md`), the product spec and implementation tickets (`.scratch/initial-product-definition/`), a proposed feature spec (`.scratch/member-directory/`), and the agent skills (`.agents/`, pinned by `skills-lock.json`). The domain documentation is complete and authoritative: read `CONTEXT.md` (glossary), `docs/domain-model.md` (entities, rules, invariants), and `docs/adr/` (decisions) before any design or implementation work; then follow the approved UX flows (`docs/ux/`) and the route map (`docs/routes.md`). Don't hunt for entrypoints or conventions in code; there is none yet.
 
 ## Engineering skills (`.agents/skills/`)
 

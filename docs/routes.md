@@ -1,6 +1,6 @@
 # Project F — Route Map
 
-Status: proposed
+Status: accepted
 
 The design-level route map, derived from the approved UX flows (`docs/ux/`). It defines each route's purpose, authorized actors, required data, actions, and states — no routes are implemented here. Final file routing in the Astro app mirrors this map, per the application architecture (Astro file routes mirroring the forum structure).
 
@@ -36,7 +36,7 @@ The design-level route map, derived from the approved UX flows (`docs/ux/`). It 
 
 | Route | Purpose | Authorized actors | Required data | Actions | States |
 | --- | --- | --- | --- | --- | --- |
-| `/member/<username>` | Public character profile | All (hideable from visitors) | Character (name, avatar, banner, balance, inventory, bag, recent threads and replies, registeredAt, lastSeen), owner account status | View profile/sheet/inventory; owner: edit avatar/banner, rename username; staff: adjust balance/inventory (when in scope), moderate | `active`; `deleted` (not visible); `inactive` badge; `hiddenFromVisitors` → 404/absent |
+| `/member/<username>` | Public character profile | All (hideable from visitors) | Character (name, avatar, banner, balance, inventory, bag, recent threads and replies, registeredAt, lastSeen), character owner's account status | View profile/sheet/inventory; character owner: edit avatar/banner, rename username; staff: adjust balance/inventory (when in scope), moderate | `active`; `deleted` (not visible); `inactive` badge; `hiddenFromVisitors` → 404/absent |
 | `/members` | Public character directory (**proposed, not in the accepted spec**) | All (hideable from visitors) | Active characters (avatar, name, username, lastSeen), FTS search, pagination | Search by name/username; filter/sort; paginate; open the profile | `active` listed; `deleted` excluded; `inactive` badge; hidden → 404 for visitors |
 
 ## Character sheets

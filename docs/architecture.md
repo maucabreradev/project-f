@@ -38,7 +38,7 @@ One Worker per deployment (ADR-0003, ADR-0006). The entrypoint wraps the Astro S
 
 ## Frontend
 
-- **Pages** render server-side (Astro SSR) so visitors read without JavaScript; routes are Astro file routes (AGENTS.md rule 23).
+- **Pages** render server-side (Astro SSR) so visitors read without JavaScript; routes are Astro file routes (AGENTS.md rule 23) mirroring the route map in `docs/routes.md`.
 - **Islands** (SolidJS) only where interactivity earns its cost: WYSIWYG editor, real-time navbar, character switcher, shop interactions, complex forms.
 - **Server state**: `@tanstack/solid-query` in islands for caching and mutations.
 - **Styling**: Tailwind CSS v4 tokens (ticket 02) with Kobalte primitives and shadcn-solid components; Atomic Design organization (AGENTS.md rule 20).

@@ -15,7 +15,7 @@ Status: proposed — **new feature, not in the accepted spec**
 1. The page lists characters: avatar, character name, username, and last connection, paginated.
 2. Filter and sort: by character name, username, or activity (registration date, last connection).
 3. Search by character name or username (FTS-backed, consistent with global search).
-4. Select a character → public character profile (flow `41-public-character-profile`).
+4. Select a character → public character profile (ticket `41-public-character-profile`).
 5. The list reflects live data: characters whose account is inactive show a badge; deleted characters never appear.
 
 ## States

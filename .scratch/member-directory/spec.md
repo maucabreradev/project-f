@@ -23,7 +23,7 @@ Append to the spec's "Notifications, search, and configuration" section:
 
 ## Proposed domain model notes
 
-- No new entity: the directory is a projection over `Character` (`name`, `username`, `avatar`, `lastSeen`, `registeredAt`, owner account status).
+- No new entity: the directory is a projection over `Character` (`name`, `username`, `avatar`, `lastSeen`, `registeredAt`, character owner's account status).
 - The visibility flag belongs to `ForumConfiguration` (single instance per deployment).
 
 ## Proposed tickets

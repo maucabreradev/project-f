@@ -103,6 +103,7 @@ _Avoid_: section
 **Forum**:
 A board inside a category that hosts threads or subforums.
 _Avoid_: board
+(The technical/code name is **Board**: `docs/domain-model.md` §2.3, the `boards` API module, and the `/boards/...` routes use it. The glossary term remains Forum.)
 
 **Subforum**:
 An optional subdivision of a forum that hosts threads. Nesting stops at one level: a subforum cannot contain further subforums.

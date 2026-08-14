@@ -1,6 +1,6 @@
 # Flow 13 — Home Page
 
-Status: proposed
+Status: accepted
 
 ## Entry
 

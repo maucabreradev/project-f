@@ -1,6 +1,6 @@
 # Flow 14 — Categories and Forums
 
-Status: proposed
+Status: accepted
 
 ## Entry
 

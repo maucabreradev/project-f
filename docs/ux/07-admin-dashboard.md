@@ -1,6 +1,6 @@
 # Flow 07 — Admin Dashboard
 
-Status: proposed
+Status: accepted
 
 ## Entry
 
@@ -13,7 +13,7 @@ Status: proposed
 The dashboard is a set of tabs; every action is confirmed where destructive and recorded in the forum log.
 
 1. **Overview**: forum statistics and pending queues (registrations to approve, appeals to resolve). Quick links into the relevant tabs.
-2. **Members**: search members; inspect status (confirmation, approval, inactive, banned); promote staff (Web master only — flow 15); ban (flow `46-ban-by-email`, `47-ban-by-ip`); resolve registration approvals (Administrator).
+2. **Members**: search members; inspect status (confirmation, approval, inactive, banned); promote staff (Web master only — flow 15); ban (tickets `46-ban-by-email`, `47-ban-by-ip`); resolve registration approvals (Administrator).
 3. **Boards**: create, edit, and reorder categories, forums, and subforums (depth ≤ 1 invariant); configure per-rank read/write permissions, visitor visibility, and per-forum content limits.
 4. **Economy**: adjust a character's balance and inventory (with mandatory reason, recorded as `adjust` transactions); review earn rules; view the economy log.
 5. **Shop**: manage the item catalog — price, stock model (infinite/limited/unique), remaining stock, per-character unique purchase, kind (inventory item or cosmetic).

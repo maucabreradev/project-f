@@ -1,6 +1,6 @@
 # Project F — UX Flows
 
-Status: proposed
+Status: accepted
 
 This directory defines the UX flows of Project F. It is a design document only — no components are implemented here. Every flow follows the same template:
 
@@ -15,32 +15,7 @@ The domain language, rules, and invariants come from `CONTEXT.md`, `docs/domain-
 
 ## Route map
 
-Proposed routes (the architecture leaves file routes open; this document fixes them for the first time — AGENTS.md rule 23).
-
-| Route | Page | Actors |
-| --- | --- | --- |
-| `/` | Home | all |
-| `/login` | Login, including quick login | visitor |
-| `/register` | Registration | visitor |
-| `/register/confirm` | Account confirmation landing | visitor |
-| `/forgot-password` | Password reset request | visitor |
-| `/reset-password` | Password reset form | visitor |
-| `/members` | Public character directory | all (hideable from visitors) |
-| `/member/<username>` | Public character profile | all (hideable from visitors) |
-| `/boards/<catId>/<forumId>/<subId>` | Board listing (category, forum, subforum) | read-permission-filtered |
-| `/thread/<id>` | Thread with posts | read permission |
-| `/new-thread/<boardId>` | Create thread | write permission |
-| `/account` | Account and character settings | member |
-| `/characters/new` | Character creation | confirmed member |
-| `/economy` | Balance and transaction ledger | member, per active character |
-| `/shop` | Shop catalog | member, per active character |
-| `/shop/item/<id>` | Item detail | member, per active character |
-| `/inventory` | Inventory and bag | member, per active character |
-| `/sheet/<characterId>` | Character sheet | all (public once created) |
-| `/admin` | Admin dashboard (tabs) | Administrator, Web master |
-| `/admin/settings` | Web master configuration | Web master only |
-
-Board routes mirror the forum structure (category → forum → subforum); ids keep the path unique. The breadcrumb always renders the parent chain.
+The canonical route map lives in `docs/routes.md` (accepted). This document used to carry its own copy; it was removed to keep a single source of truth — update `docs/routes.md`, not this file.
 
 ## Shared conventions
 
