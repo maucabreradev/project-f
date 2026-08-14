@@ -24,4 +24,4 @@ Project F is a single-tenant, deployable web application: each web master clones
 
 - Every deployment needs its own Turso database and API token, stored as a secret in the Cloudflare deployment — one external account per web master, accepted as part of the decision.
 - The single testing seam is fixed: HTTP-boundary integration tests; UI flows covered by a minimal Playwright suite.
-- The Design System is not yet documented; the approved styling tokens must be captured before frontend implementation (AGENTS.md rule 19).
+- The Design System is documented at `docs/design-system/` (tokens, components, layout, accessibility) — the approved styling tokens for frontend implementation (AGENTS.md rules 19, 23, 24).
