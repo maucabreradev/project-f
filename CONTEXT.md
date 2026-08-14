@@ -156,5 +156,11 @@ _Avoid_: alert, notice
 
 ## See also
 
+- `README.md` — document hierarchy and how the repo is organized
 - `docs/domain-model.md` — consolidated domain model (entities, rules, invariants)
 - `docs/adr/` — architectural decisions
+- `docs/architecture.md` — approved application architecture
+- `docs/persistence-model.md` — accepted persistence model (tables, decisions)
+- `docs/design-system/` — approved Design System
+- `docs/ux/` — accepted UX flows
+- `docs/routes.md` — accepted route map

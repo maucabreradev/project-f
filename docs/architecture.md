@@ -87,7 +87,7 @@ No event bus (ADR-0006): one process, one subscriber per event — a bus would b
 
 ## Persistence
 
-- Turso (libSQL) over HTTP via Drizzle; schema and migrations owned by `apps/api/src/db` (AGENTS.md rule 26: every structural change is a migration).
+- Turso (libSQL) over HTTP via Drizzle; schema and migrations owned by `apps/api/src/db` (AGENTS.md rule 26: every structural change is a migration). The accepted schema is `docs/persistence-model.md` — the initial Drizzle migration implements it, and any later structural change stays a migration.
 - FTS5 virtual tables for global and per-thread search.
 - Economy atomicity over the HTTP protocol is validated in ticket 01 (spike); fallback is single-writer serialization through a Durable Object.
 - R2 for user images; Durable Object for the real-time hub.
